@@ -7,7 +7,7 @@ export const Estadistica = ({ tareas }) => {
     const progreso = total === 0 ? 0 : Math.round((completas / total) * 100);  
 
     return (
-        <div className="bg-gradient-to-br from-blue-500 to-purple-600 text-white rounded-xl p-6 shadow-lg">
+        <div className="bg-gradient-to-br from-blue-500 to-blue-950 text-white rounded-xl p-6 shadow-lg">
             <h3 className="text-xl font-bold mb-3">
                 Estadistica de progreso
             </h3>
