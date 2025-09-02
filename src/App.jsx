@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react'
 import { HeaderTarea } from "./components/HeaderTarea.jsx"
 import { Estadistica } from "./components/Estadistica.jsx"
+import { Listado } from "./components/Listado.jsx"
 
 function App() {
   const tareas = [
@@ -63,7 +64,7 @@ function App() {
   }
   return (
     <>
-      <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-6">
+      <div className="min-h-screen bg-gradient-to-br from-blue-50 via-blue-50 to-blue-300 p-6">
         <div className="max-w-4xl mx-auto">
           <HeaderTarea />
           <Estadistica tareas={tareas} />
@@ -129,12 +130,14 @@ function App() {
                 </div>
                 <button 
                   onClick={agregarTarea}
-                  className="w-full bg-gradient-to-r from-blue-500 to-purple-600 text-white py-2 rounded-lg hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out">
+                  className="w-full bg-gradient-to-r from-blue-500 to-blue-950 text-white py-2 rounded-lg hover:scale-105 cursor-pointer transition-all duration-300 ease-in-out">
                   Agregar Tarea
                 </button>
               </div>
             </div>
-            <div>Listado</div>
+            <div>
+              <Listado /> 
+            </div>
           </div>
         </div>
       </div>
